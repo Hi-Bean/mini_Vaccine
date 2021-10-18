@@ -38,6 +38,7 @@ namespace miniProject_Vaccine
             this.병원열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.연결하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbHospiName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbVaccineM = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@ namespace miniProject_Vaccine
             this.Label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -78,6 +79,7 @@ namespace miniProject_Vaccine
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
@@ -158,6 +160,15 @@ namespace miniProject_Vaccine
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "병원 정보";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "병원 전화 번호";
             // 
             // lbHospiName
             // 
@@ -275,14 +286,14 @@ namespace miniProject_Vaccine
             this.label1.TabIndex = 0;
             this.label1.Text = "<Info>";
             // 
-            // label4
+            // button2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "병원 전화 번호";
+            this.button2.Location = new System.Drawing.Point(40, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 28);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "예약하기";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -335,6 +346,7 @@ namespace miniProject_Vaccine
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
     }
 }
 
