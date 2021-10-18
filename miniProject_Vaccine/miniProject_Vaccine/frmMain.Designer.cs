@@ -51,7 +51,6 @@ namespace miniProject_Vaccine
             this.Label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -79,11 +78,10 @@ namespace miniProject_Vaccine
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 514;
+            this.splitContainer1.Size = new System.Drawing.Size(816, 465);
+            this.splitContainer1.SplitterDistance = 524;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -100,8 +98,8 @@ namespace miniProject_Vaccine
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer2.Size = new System.Drawing.Size(514, 450);
-            this.splitContainer2.SplitterDistance = 321;
+            this.splitContainer2.Size = new System.Drawing.Size(524, 465);
+            this.splitContainer2.SplitterDistance = 331;
             this.splitContainer2.TabIndex = 0;
             // 
             // textBox1
@@ -114,7 +112,7 @@ namespace miniProject_Vaccine
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(514, 314);
+            this.textBox1.Size = new System.Drawing.Size(524, 324);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
@@ -126,7 +124,7 @@ namespace miniProject_Vaccine
             this.textBox2.Location = new System.Drawing.Point(-1, -2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(514, 127);
+            this.textBox2.Size = new System.Drawing.Size(524, 132);
             this.textBox2.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -286,20 +284,11 @@ namespace miniProject_Vaccine
             this.label1.TabIndex = 0;
             this.label1.Text = "<Info>";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(40, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "예약하기";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(816, 465);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmMain";
             this.Text = "Form1";
@@ -346,7 +335,6 @@ namespace miniProject_Vaccine
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
     }
 }
 
