@@ -38,7 +38,7 @@ namespace miniProject_Vaccine
             this.병원열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.연결하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbHospPhone = new System.Windows.Forms.Label();
             this.lbHospiName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbVaccineM = new System.Windows.Forms.Label();
@@ -51,6 +51,8 @@ namespace miniProject_Vaccine
             this.Label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnTest = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -76,6 +78,7 @@ namespace miniProject_Vaccine
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.dateTimePicker1);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
@@ -93,6 +96,7 @@ namespace miniProject_Vaccine
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnTest);
             this.splitContainer2.Panel1.Controls.Add(this.textBox1);
             // 
             // splitContainer2.Panel2
@@ -150,23 +154,23 @@ namespace miniProject_Vaccine
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.lbHospPhone);
             this.groupBox2.Controls.Add(this.lbHospiName);
             this.groupBox2.Location = new System.Drawing.Point(40, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(204, 124);
+            this.groupBox2.Size = new System.Drawing.Size(204, 97);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "병원 정보";
             // 
-            // label4
+            // lbHospPhone
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "병원 전화 번호";
+            this.lbHospPhone.AutoSize = true;
+            this.lbHospPhone.Location = new System.Drawing.Point(23, 69);
+            this.lbHospPhone.Name = "lbHospPhone";
+            this.lbHospPhone.Size = new System.Drawing.Size(107, 15);
+            this.lbHospPhone.TabIndex = 0;
+            this.lbHospPhone.Text = "병원 전화 번호";
             // 
             // lbHospiName
             // 
@@ -284,6 +288,23 @@ namespace miniProject_Vaccine
             this.label1.TabIndex = 0;
             this.label1.Text = "<Info>";
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(31, 29);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(70, 30);
+            this.btnTest.TabIndex = 1;
+            this.btnTest.Text = "TEST";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(40, 148);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -334,7 +355,9 @@ namespace miniProject_Vaccine
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbHospPhone;
+        private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
