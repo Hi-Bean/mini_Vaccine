@@ -29,6 +29,7 @@ namespace miniProject_Vaccine
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAppointment));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.cbVaccine = new System.Windows.Forms.ComboBox();
@@ -47,6 +48,7 @@ namespace miniProject_Vaccine
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lbHospital = new System.Windows.Forms.Label();
+            this.btnRevice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -57,6 +59,7 @@ namespace miniProject_Vaccine
             this.btnCancel.TabIndex = 32;
             this.btnCancel.Text = "취소하기";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOk
             // 
@@ -200,6 +203,17 @@ namespace miniProject_Vaccine
             this.lbHospital.TabIndex = 36;
             this.lbHospital.Text = "-";
             // 
+            // btnRevice
+            // 
+            this.btnRevice.Location = new System.Drawing.Point(78, 326);
+            this.btnRevice.Name = "btnRevice";
+            this.btnRevice.Size = new System.Drawing.Size(106, 34);
+            this.btnRevice.TabIndex = 31;
+            this.btnRevice.Text = "수정하기";
+            this.btnRevice.UseVisualStyleBackColor = true;
+            this.btnRevice.Visible = false;
+            this.btnRevice.Click += new System.EventHandler(this.btnRevice_Click);
+            // 
             // frmAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -222,11 +236,13 @@ namespace miniProject_Vaccine
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnRevice);
             this.Controls.Add(this.btnOk);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAppointment";
-            this.Text = "Appointment";
+            this.Text = "예약";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +267,6 @@ namespace miniProject_Vaccine
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbHospital;
+        private System.Windows.Forms.Button btnRevice;
     }
 }
