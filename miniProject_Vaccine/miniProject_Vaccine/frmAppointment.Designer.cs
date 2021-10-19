@@ -45,11 +45,13 @@ namespace miniProject_Vaccine
             this.tbId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbHospital = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(197, 310);
+            this.btnCancel.Location = new System.Drawing.Point(202, 326);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(106, 34);
             this.btnCancel.TabIndex = 32;
@@ -58,7 +60,7 @@ namespace miniProject_Vaccine
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(73, 310);
+            this.btnOk.Location = new System.Drawing.Point(78, 326);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(106, 34);
             this.btnOk.TabIndex = 31;
@@ -69,14 +71,14 @@ namespace miniProject_Vaccine
             // cbVaccine
             // 
             this.cbVaccine.FormattingEnabled = true;
-            this.cbVaccine.Location = new System.Drawing.Point(166, 106);
+            this.cbVaccine.Location = new System.Drawing.Point(167, 144);
             this.cbVaccine.Name = "cbVaccine";
             this.cbVaccine.Size = new System.Drawing.Size(194, 23);
             this.cbVaccine.TabIndex = 48;
             // 
             // dtDate
             // 
-            this.dtDate.Location = new System.Drawing.Point(166, 137);
+            this.dtDate.Location = new System.Drawing.Point(167, 175);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(194, 25);
             this.dtDate.TabIndex = 47;
@@ -84,7 +86,7 @@ namespace miniProject_Vaccine
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(107, 140);
+            this.label7.Location = new System.Drawing.Point(108, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 46;
@@ -92,7 +94,7 @@ namespace miniProject_Vaccine
             // 
             // tbResidenRegisNum
             // 
-            this.tbResidenRegisNum.Location = new System.Drawing.Point(166, 232);
+            this.tbResidenRegisNum.Location = new System.Drawing.Point(167, 270);
             this.tbResidenRegisNum.Name = "tbResidenRegisNum";
             this.tbResidenRegisNum.Size = new System.Drawing.Size(194, 25);
             this.tbResidenRegisNum.TabIndex = 45;
@@ -100,7 +102,7 @@ namespace miniProject_Vaccine
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 235);
+            this.label6.Location = new System.Drawing.Point(9, 273);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 15);
             this.label6.TabIndex = 44;
@@ -108,7 +110,7 @@ namespace miniProject_Vaccine
             // 
             // tbPhoneNum
             // 
-            this.tbPhoneNum.Location = new System.Drawing.Point(166, 201);
+            this.tbPhoneNum.Location = new System.Drawing.Point(167, 239);
             this.tbPhoneNum.Name = "tbPhoneNum";
             this.tbPhoneNum.Size = new System.Drawing.Size(194, 25);
             this.tbPhoneNum.TabIndex = 43;
@@ -116,7 +118,7 @@ namespace miniProject_Vaccine
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 204);
+            this.label3.Location = new System.Drawing.Point(61, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 15);
             this.label3.TabIndex = 42;
@@ -124,7 +126,7 @@ namespace miniProject_Vaccine
             // 
             // tbArea
             // 
-            this.tbArea.Location = new System.Drawing.Point(166, 168);
+            this.tbArea.Location = new System.Drawing.Point(167, 206);
             this.tbArea.Name = "tbArea";
             this.tbArea.Size = new System.Drawing.Size(194, 25);
             this.tbArea.TabIndex = 41;
@@ -132,7 +134,7 @@ namespace miniProject_Vaccine
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(107, 171);
+            this.label4.Location = new System.Drawing.Point(108, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 15);
             this.label4.TabIndex = 40;
@@ -141,7 +143,7 @@ namespace miniProject_Vaccine
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 109);
+            this.label2.Location = new System.Drawing.Point(90, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 39;
@@ -149,7 +151,7 @@ namespace miniProject_Vaccine
             // 
             // tbPw
             // 
-            this.tbPw.Location = new System.Drawing.Point(167, 72);
+            this.tbPw.Location = new System.Drawing.Point(168, 110);
             this.tbPw.Name = "tbPw";
             this.tbPw.Size = new System.Drawing.Size(194, 25);
             this.tbPw.TabIndex = 37;
@@ -164,7 +166,7 @@ namespace miniProject_Vaccine
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(102, 75);
+            this.label5.Location = new System.Drawing.Point(103, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 15);
             this.label5.TabIndex = 35;
@@ -178,6 +180,25 @@ namespace miniProject_Vaccine
             this.label1.Size = new System.Drawing.Size(43, 15);
             this.label1.TabIndex = 36;
             this.label1.Text = "Name";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(88, 77);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 15);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Hospital";
+            // 
+            // lbHospital
+            // 
+            this.lbHospital.AutoSize = true;
+            this.lbHospital.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbHospital.Location = new System.Drawing.Point(165, 77);
+            this.lbHospital.Name = "lbHospital";
+            this.lbHospital.Size = new System.Drawing.Size(17, 17);
+            this.lbHospital.TabIndex = 36;
+            this.lbHospital.Text = "-";
             // 
             // frmAppointment
             // 
@@ -197,6 +218,8 @@ namespace miniProject_Vaccine
             this.Controls.Add(this.tbPw);
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbHospital);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
@@ -226,5 +249,7 @@ namespace miniProject_Vaccine
         public System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbHospital;
     }
 }

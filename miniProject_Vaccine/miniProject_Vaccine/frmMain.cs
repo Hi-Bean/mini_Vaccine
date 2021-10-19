@@ -32,7 +32,7 @@ namespace miniProject_Vaccine
 
             string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             sql1 = $"select vname, vcount from vaccineTable where hosptialName = N'{hname}' and vdate='{date}'";
-            textBox2.Text += sqldb.GetString(sql1);
+            //textBox2.Text += sqldb.GetString(sql1);
 
             //DataTable d = (DataTable)sqldb.Run(sql1);
 
@@ -63,8 +63,11 @@ namespace miniProject_Vaccine
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
+            if(CurrentHospitalName == "")
+                if (MessageBox.Show("병원을 선택해주세요.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
+                    return;
             //string sID, sArea, sPhone, sRegis;
-            frmAppointment dlg = new frmAppointment();
+            frmAppointment dlg = new frmAppointment(CurrentHospitalName);
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 string sID = dlg.tbId.Text;

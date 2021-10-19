@@ -13,13 +13,17 @@ namespace miniProject_Vaccine
 {
     public partial class frmAppointment : Form
     {
-        public frmAppointment()
+        string Chname = "";
+        public frmAppointment(string hosName)
         {
             InitializeComponent();
             cbVaccine.Items.Add("화이자");
             cbVaccine.Items.Add("모더나");
-            cbVaccine.Items.Add("아스트라제네카");
+            cbVaccine.Items.Add("AZ");
             cbVaccine.Items.Add("얀센");
+
+            Chname = hosName;
+            lbHospital.Text = Chname;
         }
 
         //SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
@@ -32,31 +36,30 @@ namespace miniProject_Vaccine
             string s1 = "(";
             string s2 = "(";
 
-            if (tbId.Text != "")
-            { s1 += "name"; s2 += $"N'{tbId.Text}'"; }
-            if (tbId.Text != "")
-            { s1 += ",pw"; s2 += $",N'{tbPw.Text}'"; }
-            if (cbVaccine.Text != "")
-            { s1 += ",vaccine"; s2 += $",N'{cbVaccine.Text}'"; }
-            if (dtDate.Value.ToString() != "")
-            { s1 += ",date"; s2 += $",N'{dtDate.Value.ToString("yyyy-MM-dd")}'"; }
-            if (tbArea.Text != "")
-            { s1 += ",area"; s2 += $",N'{tbArea.Text}'"; }
-            if (tbPhoneNum.Text != "")
-            { s1 += ",phone"; s2 += $",N'{tbPhoneNum.Text}'"; }
-            if (tbResidenRegisNum.Text != "")
-            { s1 += ",resident_regis_num"; s2 += $",N'{tbResidenRegisNum.Text}'"; }
-
-            s1 += ")"; s2 += ")";
+            if (tbId.Text != "" && tbPw.Text != "" && cbVaccine.SelectedItem.ToString() != "" && tbArea.Text != "" && tbPhoneNum.Text != "" && tbResidenRegisNum.Text != "")
+            {
+                s1 += "name, pw, vaccine, date, area, phone, resident_regis_num)";
+                s2 += $"N'{tbId.Text}',N'{tbPw.Text}',N'{cbVaccine.SelectedItem.ToString()}',N'{dtDate.Value.ToString("yyyy-MM-dd")}',N'{tbArea.Text}',N'{tbPhoneNum.Text}',N'{tbResidenRegisNum.Text}')";
+            }
+            else
+            {
+                if (MessageBox.Show("정보를 정확히 입력해주세요.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
+                    return;
+            }
 
             string sql = $"insert into patient {s1} values {s2}";
 
             if (MessageBox.Show("저장하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                sqldb.Run(sql);
-                int vcount = int.Parse(sqldb.GetString($"select vcount from vaccineTable where vname = N'{cbVaccine.Text}' and vdate = '{dtDate.Value.ToString("yyyy-MM-dd")}'"));
+                int vcount = int.Parse(sqldb.GetString($"select vcount from vaccineTable where hosptialName = N'{Chname}' and vname = N'{cbVaccine.Text}' and vdate = '{dtDate.Value.ToString("yyyy-MM-dd")}'"));
+                if(vcount <= 0)
+                {
+                    if (MessageBox.Show("해당 백신은 예약이 불가능합니다.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
+                        return;
+                }
                 vcount -= 1;
-                sqldb.Run($"update vaccineTable set vcount = {vcount} where vname = N'{cbVaccine.Text}' and vdate = '{dtDate.Value.ToString("yyyy-MM-dd")}'");
+                sqldb.Run($"update vaccineTable set vcount = {vcount} where hosptialName = N'{Chname}' and vname = N'{cbVaccine.Text}' and vdate = '{dtDate.Value.ToString("yyyy-MM-dd")}'");
+                sqldb.Run(sql);
                 sqldb.Close();
                 this.DialogResult = DialogResult.OK;
             }
