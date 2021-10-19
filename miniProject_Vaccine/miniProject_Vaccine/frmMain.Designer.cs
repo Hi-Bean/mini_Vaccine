@@ -30,13 +30,13 @@ namespace miniProject_Vaccine
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.병원열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.연결하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnTest = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbHospPhone = new System.Windows.Forms.Label();
             this.lbHospiName = new System.Windows.Forms.Label();
@@ -49,87 +49,15 @@ namespace miniProject_Vaccine
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReservation = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.cbHospitalName = new System.Windows.Forms.ComboBox();
+            this.btnLookup = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dateTimePicker1);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(816, 465);
-            this.splitContainer1.SplitterDistance = 524;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.btnTest);
-            this.splitContainer2.Panel1.Controls.Add(this.textBox1);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer2.Size = new System.Drawing.Size(524, 465);
-            this.splitContainer2.SplitterDistance = 331;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(0, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(524, 324);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox2.Location = new System.Drawing.Point(-1, -2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(524, 132);
-            this.textBox2.TabIndex = 1;
             // 
             // contextMenuStrip1
             // 
@@ -152,14 +80,52 @@ namespace miniProject_Vaccine
             this.연결하기ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.연결하기ToolStripMenuItem.Text = "연결하기";
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.webBrowser1.Location = new System.Drawing.Point(22, 31);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScrollBarsEnabled = false;
+            this.webBrowser1.Size = new System.Drawing.Size(494, 400);
+            this.webBrowser1.TabIndex = 15;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Location = new System.Drawing.Point(19, 447);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(497, 105);
+            this.textBox2.TabIndex = 17;
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(719, 135);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(70, 30);
+            this.btnTest.TabIndex = 18;
+            this.btnTest.Text = "TEST";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(564, 95);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker1.TabIndex = 22;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lbHospPhone);
             this.groupBox2.Controls.Add(this.lbHospiName);
-            this.groupBox2.Location = new System.Drawing.Point(40, 37);
+            this.groupBox2.Location = new System.Drawing.Point(565, 188);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(204, 97);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "병원 정보";
             // 
@@ -191,10 +157,10 @@ namespace miniProject_Vaccine
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Label2);
-            this.groupBox1.Location = new System.Drawing.Point(40, 188);
+            this.groupBox1.Location = new System.Drawing.Point(564, 291);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(205, 170);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "백신 종류/수량";
             // 
@@ -270,81 +236,91 @@ namespace miniProject_Vaccine
             this.Label2.TabIndex = 2;
             this.Label2.Text = "AZ";
             // 
-            // button1
+            // btnReservation
             // 
-            this.button1.Location = new System.Drawing.Point(155, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "예약하기";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnReservation.Location = new System.Drawing.Point(534, 486);
+            this.btnReservation.Name = "btnReservation";
+            this.btnReservation.Size = new System.Drawing.Size(78, 28);
+            this.btnReservation.TabIndex = 19;
+            this.btnReservation.Text = "예약";
+            this.btnReservation.UseVisualStyleBackColor = true;
+            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 9);
+            this.label1.Location = new System.Drawing.Point(601, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "<Info>";
+            this.label1.Size = new System.Drawing.Size(126, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "[병원, 날짜 선택]";
             // 
-            // btnTest
+            // cbHospitalName
             // 
-            this.btnTest.Location = new System.Drawing.Point(31, 29);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(70, 30);
-            this.btnTest.TabIndex = 1;
-            this.btnTest.Text = "TEST";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            this.cbHospitalName.FormattingEnabled = true;
+            this.cbHospitalName.Location = new System.Drawing.Point(564, 57);
+            this.cbHospitalName.Name = "cbHospitalName";
+            this.cbHospitalName.Size = new System.Drawing.Size(200, 23);
+            this.cbHospitalName.TabIndex = 23;
+            this.cbHospitalName.SelectedIndexChanged += new System.EventHandler(this.cbHospitalName_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // btnLookup
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(40, 148);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 6;
+            this.btnLookup.Location = new System.Drawing.Point(630, 486);
+            this.btnLookup.Name = "btnLookup";
+            this.btnLookup.Size = new System.Drawing.Size(75, 28);
+            this.btnLookup.TabIndex = 24;
+            this.btnLookup.Text = "조회";
+            this.btnLookup.UseVisualStyleBackColor = true;
+            // 
+            // btnModify
+            // 
+            this.btnModify.Location = new System.Drawing.Point(719, 486);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(75, 28);
+            this.btnModify.TabIndex = 24;
+            this.btnModify.Text = "수정";
+            this.btnModify.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 465);
-            this.Controls.Add(this.splitContainer1);
+            this.ClientSize = new System.Drawing.Size(816, 574);
+            this.Controls.Add(this.btnModify);
+            this.Controls.Add(this.btnLookup);
+            this.Controls.Add(this.cbHospitalName);
+            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnTest);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnReservation);
+            this.Controls.Add(this.label1);
             this.Name = "frmMain";
             this.Text = "Form1";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        protected System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 병원열기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 연결하기ToolStripMenuItem;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lbHospPhone;
         private System.Windows.Forms.Label lbHospiName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbVaccineM;
@@ -355,9 +331,11 @@ namespace miniProject_Vaccine
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Label2;
-        private System.Windows.Forms.Label lbHospPhone;
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnReservation;
+        protected System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbHospitalName;
+        private System.Windows.Forms.Button btnLookup;
+        private System.Windows.Forms.Button btnModify;
     }
 }
 
