@@ -1,0 +1,20 @@
+C:\Users\user\source\repos\myChat - 환자접속\myChat\bin\Debug\myChat.exe.config
+C:\Users\user\source\repos\myChat - 환자접속\myChat\bin\Debug\myChat.exe
+C:\Users\user\source\repos\myChat - 환자접속\myChat\bin\Debug\myChat.pdb
+C:\Users\user\source\repos\myChat - 환자접속\myChat\obj\Debug\chatClient.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\myChat - 환자접속\myChat\obj\Debug\myChat.chatClient.resources
+C:\Users\user\source\repos\myChat - 환자접속\myChat\obj\Debug\myChat.Properties.Resources.resources
+C:\Users\user\source\repos\myChat - 환자접속\myChat\obj\Debug\chatClient.csproj.GenerateResource.cache
+C:\Users\user\source\repos\myChat - 환자접속\myChat\obj\Debug\chatClient.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\myChat - 환자접속\myChat\obj\Debug\myChat.exe
+C:\Users\user\source\repos\myChat - 환자접속\myChat\obj\Debug\myChat.pdb
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\obj\Debug\chatClient.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\obj\Debug\myChat.chatClient.resources
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\obj\Debug\myChat.Properties.Resources.resources
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\obj\Debug\chatClient.csproj.GenerateResource.cache
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\obj\Debug\chatClient.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\obj\Debug\myChat.exe
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\obj\Debug\myChat.pdb
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\bin\Debug\myChat.exe.config
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\bin\Debug\myChat.exe
+C:\Users\user\source\repos\[일대일문의] 환자\myChat\bin\Debug\myChat.pdb
