@@ -60,8 +60,8 @@ namespace miniProject_Vaccine
             string sql = $"select * from patient where name = N'{rName}' and pw = N'{rPW}'";
 
             DataTable dt = (DataTable)sqldb.Run(sql);
-            prevVaccine = dt.Rows[0][2].ToString();
-            prevhname = dt.Rows[0][3].ToString();
+            prevhname = dt.Rows[0][2].ToString();
+            prevVaccine = dt.Rows[0][3].ToString();
             prevDate = dt.Rows[0][4].ToString();
             //prevArea = dt.Rows[0][5].ToString();
             //prevPhone = dt.Rows[0][6].ToString();
@@ -69,8 +69,8 @@ namespace miniProject_Vaccine
 
             tbId.Text = rName;
             tbPw.Text = rPW;
-            cbVaccine.Text = dt.Rows[0][2].ToString();
-            lbHospital.Text = dt.Rows[0][3].ToString();
+            cbVaccine.Text = dt.Rows[0][3].ToString();
+            lbHospital.Text = dt.Rows[0][2].ToString();
             dtDate.Text = dt.Rows[0][4].ToString();
             tbArea.Text = dt.Rows[0][5].ToString();
             tbPhoneNum.Text = dt.Rows[0][6].ToString();
