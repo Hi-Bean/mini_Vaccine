@@ -53,9 +53,10 @@ namespace miniProject_Vaccine
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(202, 326);
+            this.btnCancel.Location = new System.Drawing.Point(227, 435);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(106, 34);
+            this.btnCancel.Size = new System.Drawing.Size(119, 45);
             this.btnCancel.TabIndex = 32;
             this.btnCancel.Text = "취소하기";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@ namespace miniProject_Vaccine
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(78, 326);
+            this.btnOk.Location = new System.Drawing.Point(88, 435);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(106, 34);
+            this.btnOk.Size = new System.Drawing.Size(119, 45);
             this.btnOk.TabIndex = 31;
             this.btnOk.Text = "예약하기";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -74,122 +76,129 @@ namespace miniProject_Vaccine
             // cbVaccine
             // 
             this.cbVaccine.FormattingEnabled = true;
-            this.cbVaccine.Location = new System.Drawing.Point(167, 144);
+            this.cbVaccine.Location = new System.Drawing.Point(188, 192);
+            this.cbVaccine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbVaccine.Name = "cbVaccine";
-            this.cbVaccine.Size = new System.Drawing.Size(194, 23);
+            this.cbVaccine.Size = new System.Drawing.Size(218, 28);
             this.cbVaccine.TabIndex = 48;
             // 
             // dtDate
             // 
-            this.dtDate.Location = new System.Drawing.Point(167, 175);
+            this.dtDate.Location = new System.Drawing.Point(188, 233);
+            this.dtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(194, 25);
+            this.dtDate.Size = new System.Drawing.Size(218, 27);
             this.dtDate.TabIndex = 47;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(108, 178);
+            this.label7.Location = new System.Drawing.Point(123, 238);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.Size = new System.Drawing.Size(41, 20);
             this.label7.TabIndex = 46;
             this.label7.Text = "Date";
             // 
             // tbResidenRegisNum
             // 
-            this.tbResidenRegisNum.Location = new System.Drawing.Point(167, 270);
+            this.tbResidenRegisNum.Location = new System.Drawing.Point(188, 360);
+            this.tbResidenRegisNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbResidenRegisNum.Name = "tbResidenRegisNum";
-            this.tbResidenRegisNum.Size = new System.Drawing.Size(194, 25);
+            this.tbResidenRegisNum.Size = new System.Drawing.Size(218, 27);
             this.tbResidenRegisNum.TabIndex = 45;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 273);
+            this.label6.Location = new System.Drawing.Point(18, 363);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 15);
+            this.label6.Size = new System.Drawing.Size(146, 20);
             this.label6.TabIndex = 44;
             this.label6.Text = "Resident Regis Num";
             // 
             // tbPhoneNum
             // 
-            this.tbPhoneNum.Location = new System.Drawing.Point(167, 239);
+            this.tbPhoneNum.Location = new System.Drawing.Point(188, 319);
+            this.tbPhoneNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPhoneNum.Name = "tbPhoneNum";
-            this.tbPhoneNum.Size = new System.Drawing.Size(194, 25);
+            this.tbPhoneNum.Size = new System.Drawing.Size(218, 27);
             this.tbPhoneNum.TabIndex = 43;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 242);
+            this.label3.Location = new System.Drawing.Point(71, 322);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 15);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 42;
             this.label3.Text = "Phone Num";
             // 
             // tbArea
             // 
-            this.tbArea.Location = new System.Drawing.Point(167, 206);
+            this.tbArea.Location = new System.Drawing.Point(188, 275);
+            this.tbArea.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbArea.Name = "tbArea";
-            this.tbArea.Size = new System.Drawing.Size(194, 25);
+            this.tbArea.Size = new System.Drawing.Size(218, 27);
             this.tbArea.TabIndex = 41;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 209);
+            this.label4.Location = new System.Drawing.Point(122, 279);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 15);
+            this.label4.Size = new System.Drawing.Size(40, 20);
             this.label4.TabIndex = 40;
             this.label4.Text = "Area";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 147);
+            this.label2.Location = new System.Drawing.Point(102, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
+            this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 39;
             this.label2.Text = "Vaccine";
             // 
             // tbPw
             // 
-            this.tbPw.Location = new System.Drawing.Point(168, 110);
+            this.tbPw.Location = new System.Drawing.Point(189, 147);
+            this.tbPw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPw.Name = "tbPw";
-            this.tbPw.Size = new System.Drawing.Size(194, 25);
+            this.tbPw.Size = new System.Drawing.Size(218, 27);
             this.tbPw.TabIndex = 37;
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(167, 40);
+            this.tbId.Location = new System.Drawing.Point(188, 53);
+            this.tbId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(194, 25);
+            this.tbId.Size = new System.Drawing.Size(218, 27);
             this.tbId.TabIndex = 38;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(103, 113);
+            this.label5.Location = new System.Drawing.Point(132, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 15);
+            this.label5.Size = new System.Drawing.Size(32, 20);
             this.label5.TabIndex = 35;
             this.label5.Text = "PW";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 43);
+            this.label1.Location = new System.Drawing.Point(115, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 36;
             this.label1.Text = "Name";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(88, 77);
+            this.label8.Location = new System.Drawing.Point(99, 103);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 15);
+            this.label8.Size = new System.Drawing.Size(65, 20);
             this.label8.TabIndex = 36;
             this.label8.Text = "Hospital";
             // 
@@ -197,7 +206,7 @@ namespace miniProject_Vaccine
             // 
             this.lbHospital.AutoSize = true;
             this.lbHospital.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbHospital.Location = new System.Drawing.Point(165, 77);
+            this.lbHospital.Location = new System.Drawing.Point(186, 103);
             this.lbHospital.Name = "lbHospital";
             this.lbHospital.Size = new System.Drawing.Size(17, 17);
             this.lbHospital.TabIndex = 36;
@@ -205,9 +214,10 @@ namespace miniProject_Vaccine
             // 
             // btnRevice
             // 
-            this.btnRevice.Location = new System.Drawing.Point(78, 326);
+            this.btnRevice.Location = new System.Drawing.Point(88, 435);
+            this.btnRevice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRevice.Name = "btnRevice";
-            this.btnRevice.Size = new System.Drawing.Size(106, 34);
+            this.btnRevice.Size = new System.Drawing.Size(119, 45);
             this.btnRevice.TabIndex = 31;
             this.btnRevice.Text = "수정하기";
             this.btnRevice.UseVisualStyleBackColor = true;
@@ -216,9 +226,9 @@ namespace miniProject_Vaccine
             // 
             // frmAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 389);
+            this.ClientSize = new System.Drawing.Size(431, 519);
             this.Controls.Add(this.cbVaccine);
             this.Controls.Add(this.dtDate);
             this.Controls.Add(this.label7);
@@ -238,11 +248,13 @@ namespace miniProject_Vaccine
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRevice);
             this.Controls.Add(this.btnOk);
+            this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAppointment";
-            this.Text = "예약";
+            this.Text = "Appointment";
             this.ResumeLayout(false);
             this.PerformLayout();
 

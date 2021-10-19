@@ -78,14 +78,9 @@ namespace miniProject_Vaccine
             //string sID, sArea, sPhone, sRegis;
             frmAppointment dlg = new frmAppointment(CurrentHospitalName, year, month,day);
 
-            string sID = "";
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                sID = dlg.tbId.Text;
-                //string sPW = dlg.tbPw.Text;
-                //string sArea = dlg.tbArea.Text;
-                //string sPhone = dlg.tbPhoneNum.Text;
-                //string sRegis = dlg.tbResidenRegisNum.Text;
+                tbNote.Text = "예약이 접수되었습니다.\r\n";
             }
         }
 
@@ -123,7 +118,9 @@ namespace miniProject_Vaccine
 
             frmAppointment dlg = new frmAppointment(name, pw, year, month, day);
             if(dlg.ShowDialog() == DialogResult.OK)
-            { }
+            {
+                tbNote.Text = "예약 변경이 완료되었습니다.\r\n";
+            }
 
         }
     }
