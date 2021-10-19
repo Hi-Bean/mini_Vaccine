@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace miniProject_Vaccine
             day = int.Parse(dateTimePicker1.Value.ToString("dd"));
         }
 
+        string sqlPath = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30";
+        string chatPath = @"C:\Users\hallo\Desktop\미니프로젝트\mini_Vaccine-main\miniProject_Vaccine\miniProject_Vaccine\bin\Debug\myChat.exe";
         //SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
         //string CurrentTable = "";
         string CurrentHospitalName = "";
@@ -31,7 +34,7 @@ namespace miniProject_Vaccine
                 if (MessageBox.Show("병원을 선택해주세요.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
                     return;
 
-            SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDB sqldb = new SqlDB(sqlPath);
             string tname = "hospitalINFO"; string hname = CurrentHospitalName;
             string sql1 = $"select hphone from {tname} where hname = N'{hname}'";
 
@@ -44,7 +47,7 @@ namespace miniProject_Vaccine
 
             //DataTable d = (DataTable)sqldb.Run(sql1);
 
-            lbVaccineA.Text = sqldb.GetString($"select vcount from vaccineTable where hosptialName = N'{hname}' and vdate='{date}' and vname = 'AZ'");
+            lbVaccineA.Text = sqldb.GetString($"select vcount from vaccineTable where hosptialName = N'{hname}' and vdate='{date}' and vname = N'AZ'");
             lbVaccineH.Text = sqldb.GetString($"select vcount from vaccineTable where hosptialName = N'{hname}' and vdate='{date}' and vname = N'화이자'");
             lbVaccineM.Text = sqldb.GetString($"select vcount from vaccineTable where hosptialName = N'{hname}' and vdate='{date}' and vname = N'모더나'");
             lbVaccineY.Text = sqldb.GetString($"select vcount from vaccineTable where hosptialName = N'{hname}' and vdate='{date}' and vname = N'얀센'");
@@ -54,7 +57,7 @@ namespace miniProject_Vaccine
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDB sqldb = new SqlDB(sqlPath);
             string url = "http://localhost:8888";
             this.webBrowser1.Navigate(url);
 
@@ -84,9 +87,10 @@ namespace miniProject_Vaccine
             }
         }
 
+
         private void btnChatt_Click(object sender, EventArgs e)
         {
-
+            Process.Start(chatPath);
         }
 
         private void btnLookup_Click(object sender, EventArgs e)
@@ -96,7 +100,7 @@ namespace miniProject_Vaccine
             {
                 string name = dlgLogin.tbName.Text;
                 string pw = dlgLogin.tbPW.Text;
-                SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlDB sqldb = new SqlDB(sqlPath);
                 DataTable dt = (DataTable)sqldb.Run($"select hname, date, vaccine from patient where name = N'{name}' and pw = N'{pw}'");
                 tbNote.Text = $"예약정보는 다음과 같습니다.\r\n\r\n[예약자]\t{name} 님\r\n[병원]\t{dt.Rows[0][0]}\r\n[접종일]\t{dt.Rows[0][1]}\r\n[백신]\t{dt.Rows[0][2]}\r\n";
             }

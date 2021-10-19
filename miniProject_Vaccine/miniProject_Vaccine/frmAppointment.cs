@@ -14,6 +14,8 @@ namespace miniProject_Vaccine
     public partial class frmAppointment : Form
     {
         string Chname = ""; int year, month, day;
+        string sqlPath = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30";
+
         public frmAppointment(string hosName, int y, int m, int d)
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace miniProject_Vaccine
 
 
         // 예약 수정을 위한 생성자
-        string rName, rPW, prevVaccine, prevhname, prevDate, prevArea, prevPhone, prevRegisterNum;
+        string rName, rPW, prevVaccine, prevhname, prevDate;
         public frmAppointment(string name, string pw, int y, int m, int d)
         {
             InitializeComponent();
@@ -54,7 +56,7 @@ namespace miniProject_Vaccine
             rName = name; rPW = pw;
             this.Text = "예약 정보 수정";
 
-            SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDB sqldb = new SqlDB(sqlPath);
             string sql = $"select * from patient where name = N'{rName}' and pw = N'{rPW}'";
 
             DataTable dt = (DataTable)sqldb.Run(sql);
@@ -82,12 +84,6 @@ namespace miniProject_Vaccine
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
-        
-
-        //SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
-        //SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\si129\source\repos\플젝 2\mini_Vaccine_DB-main (1)\mini_Vaccine_DB-main\myHospital_DB\myHospital.mdf;Integrated Security = True; Connect Timeout = 30");
-        string CurrentTable = "";
 
         private void btnOk_Click(object sender, EventArgs e)
         {
@@ -118,7 +114,7 @@ namespace miniProject_Vaccine
             }
 
             // db실행
-            SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDB sqldb = new SqlDB(sqlPath);
             string sql = $"insert into patient {s1} values {s2}";
 
             // 저장 여부 한번 더 확인
@@ -184,7 +180,7 @@ namespace miniProject_Vaccine
             }
 
             // db실행
-            SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDB sqldb = new SqlDB(sqlPath);
             string sql = $"update patient set {s1} where name = N'{tbId.Text}' and pw = N'{tbPw.Text}'";
 
             // 저장 여부 한번 더 확인

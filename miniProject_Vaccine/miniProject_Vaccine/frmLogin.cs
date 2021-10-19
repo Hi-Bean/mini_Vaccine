@@ -19,9 +19,10 @@ namespace miniProject_Vaccine
             InitializeComponent();
         }
 
+        string sqlPath = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30";
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlDB sqldb = new SqlDB(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDB sqldb = new SqlDB(sqlPath);
             
             if(tbName.Text == "" || tbPW.Text == "")
             {
