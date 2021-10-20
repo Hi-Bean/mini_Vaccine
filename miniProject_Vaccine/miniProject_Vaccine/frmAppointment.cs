@@ -34,11 +34,15 @@ namespace miniProject_Vaccine
             btnRevice.Visible = false;
 
             this.Text = "백신 예약";
+
+            label10.Visible = false;
+            lbSuccess.Visible = false;
         }
 
 
         // 예약 수정을 위한 생성자
         string rName, rPW, prevVaccine, prevhname, prevDate;
+        int prevS;
         public frmAppointment(string name, string pw, int y, int m, int d)
         {
             InitializeComponent();
@@ -75,6 +79,12 @@ namespace miniProject_Vaccine
             tbArea.Text = dt.Rows[0][5].ToString();
             tbPhoneNum.Text = dt.Rows[0][6].ToString();
             tbResidenRegisNum.Text = dt.Rows[0][7].ToString();
+
+            prevS = int.Parse(dt.Rows[0][8].ToString());
+            if (prevS == 0)
+                lbSuccess.Text = "미접종 상태";
+            else
+                lbSuccess.Text = "접종완료";
 
             sqldb.Close();
 
@@ -120,6 +130,14 @@ namespace miniProject_Vaccine
             // 저장 여부 한번 더 확인
             if (MessageBox.Show("저장하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                // 중복된 주민번호의 경우 예약 불가능
+                string rNum = sqldb.GetString($"select resident_regis_num from patient where resident_regis_num = N'{tbResidenRegisNum.Text}'");
+                if(rNum == tbResidenRegisNum.Text)
+                {
+                    if (MessageBox.Show("주민번호를 확인해주세요.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
+                        return;
+                }
+
                 // temp : vcount의 값이 아예 없는 경우 '-'값이 들어옴
                 string temp = sqldb.GetString($"select vcount from vaccineTable where hosptialName = N'{Chname}' and vname = N'{cbVaccine.Text}' and vdate = '{dtDate.Value.ToString("yyyy-MM-dd")}'");
                 if(temp == "-")
@@ -181,7 +199,18 @@ namespace miniProject_Vaccine
 
             // db실행
             SqlDB sqldb = new SqlDB(sqlPath);
-            string sql = $"update patient set {s1} where name = N'{tbId.Text}' and pw = N'{tbPw.Text}'";
+            string sql = $"update patient set {s1} where name = N'{tbId.Text}' and pw = N'{tbPw.Text}' and resident_regis_num = N'{tbResidenRegisNum.Text}'";
+
+
+
+            if (prevS != 0)
+            {
+                if (MessageBox.Show("접종 완료자입니다.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
+                {
+                    this.Close();
+                    return;
+                }
+            }
 
             // 저장 여부 한번 더 확인
             if (MessageBox.Show("저장하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)

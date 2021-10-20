@@ -100,9 +100,13 @@ namespace miniProject_Vaccine
             {
                 string name = dlgLogin.tbName.Text;
                 string pw = dlgLogin.tbPW.Text;
+                string rnum = dlgLogin.tbRegisterNum.Text;
                 SqlDB sqldb = new SqlDB(sqlPath);
-                DataTable dt = (DataTable)sqldb.Run($"select hname, date, vaccine from patient where name = N'{name}' and pw = N'{pw}'");
+                DataTable dt = (DataTable)sqldb.Run($"select hname, date, vaccine, success from patient where name = N'{name}' and pw = N'{pw}' and resident_regis_num = N'{rnum}'");
                 tbNote.Text = $"예약정보는 다음과 같습니다.\r\n\r\n[예약자]\t{name} 님\r\n[병원]\t{dt.Rows[0][0]}\r\n[접종일]\t{dt.Rows[0][1]}\r\n[백신]\t{dt.Rows[0][2]}\r\n";
+
+                if (int.Parse(dt.Rows[0][3].ToString()) != 0)
+                    tbNote.Text += "\r\n>>>>> 접종완료자입니다.\r\n";
             }
             else
                 dlgLogin.Close();

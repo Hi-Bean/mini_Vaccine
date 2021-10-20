@@ -24,21 +24,21 @@ namespace miniProject_Vaccine
         {
             SqlDB sqldb = new SqlDB(sqlPath);
             
-            if(tbName.Text == "" || tbPW.Text == "")
+            if(tbName.Text == "" || tbPW.Text == "" || tbRegisterNum.Text == "")
             {
                 if (MessageBox.Show("빈칸에 값을 입력하세요.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
                     return;
             }
             else
             {
-                string s = sqldb.GetString($"select name from patient where name = N'{tbName.Text}' and pw = N'{tbPW.Text}'");
+                string s = sqldb.GetString($"select name from patient where name = N'{tbName.Text}' and pw = N'{tbPW.Text}' and resident_regis_num = N'{tbRegisterNum.Text}'");
                 if (s == tbName.Text)
                 {
                     sqldb.Close();
                     this.DialogResult = DialogResult.OK;
                 }
                 else
-                    if (MessageBox.Show("예약자이름 또는 비밀번호가 올바르지 않습니다.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
+                    if (MessageBox.Show("예약자의 정보가 올바르지 않습니다.\r\n", "", MessageBoxButtons.OK) == DialogResult.OK)
                         return;
             }
         }

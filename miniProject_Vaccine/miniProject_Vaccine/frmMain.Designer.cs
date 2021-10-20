@@ -341,7 +341,7 @@ namespace miniProject_Vaccine
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
-            this.Text = "백신 예약 프로그램 (ver.1.0.3)";
+            this.Text = "백신 예약 프로그램 (ver.1.2.5)";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
