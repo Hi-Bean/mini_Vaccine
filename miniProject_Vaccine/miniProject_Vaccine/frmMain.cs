@@ -17,9 +17,9 @@ namespace miniProject_Vaccine
         public frmMain()
         {
             InitializeComponent();
-            year = int.Parse(dateTimePicker1.Value.ToString("yyyy"));
-            month = int.Parse(dateTimePicker1.Value.ToString("MM"));
-            day = int.Parse(dateTimePicker1.Value.ToString("dd"));
+            year = int.Parse(DateTime.Now.ToString("yyyy"));
+            month = int.Parse(DateTime.Now.ToString("MM"));
+            day = int.Parse(DateTime.Now.ToString("dd"));
         }
 
         string sqlPath = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hallo\Desktop\myHospital_DB\myHospital.mdf;Integrated Security=True;Connect Timeout=30";

@@ -56,6 +56,7 @@ namespace miniProject_Vaccine
             this.btnLookup = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnChatt = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -309,11 +310,21 @@ namespace miniProject_Vaccine
             this.btnChatt.UseVisualStyleBackColor = false;
             this.btnChatt.Click += new System.EventHandler(this.btnChatt_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(76, 579);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(439, 20);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "※※예약 취소를 원하시는 경우, 상담사 채팅을 이용해주세요!※※";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 611);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChatt);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnLookup);
@@ -368,6 +379,7 @@ namespace miniProject_Vaccine
         private System.Windows.Forms.Button btnLookup;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnChatt;
+        private System.Windows.Forms.Label label4;
     }
 }
 
