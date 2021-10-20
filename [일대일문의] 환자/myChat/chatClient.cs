@@ -20,6 +20,8 @@ namespace myChat
         }
 
         delegate void cbAddText(string str, int i);
+
+        //AddText()를 사용하여 대화창(1), 메세지 입력창(2) 텍스트 추가
         void AddText(string str, int i)
         {
             if (tbServer.InvokeRequired || tbClient.InvokeRequired )
@@ -47,48 +49,6 @@ namespace myChat
         string ConnectIP = "127.0.0.1";
         int ConnectPort = 9000;
 
- 
-        void ServerProcess()
-        {
-            while (true)
-            {
-                if (listen.Pending())
-                {
-                    if (CurrentClientNum == 9) break;
-                    tcp[CurrentClientNum] = listen.AcceptTcpClient();                  
-                    string sLabel = tcp[CurrentClientNum].Client.RemoteEndPoint.ToString();
-                    AddText($"Client [{sLabel}] 로부터 접속되었습니다\r\n\r\n", 1);
-                    AddText(sLabel, 3);
-
-                    if(threadRead == null)
-                    {
-                        threadRead = new Thread(ReadProcess);
-                        threadRead.Start();
-                    }
-                    CurrentClientNum++;
-                }
-                Thread.Sleep(100);
-            }
-        }        
-
-        void ReadProcess()
-        {
-            
-            byte[] bArr = new byte[512];
-            while (true)
-            {
-                for(int i = 0; i < CurrentClientNum; i++)
-                {
-                    NetworkStream ns = tcp[i].GetStream();
-                    if (ns.DataAvailable)
-                    {
-                        int n = ns.Read(bArr, 0, 512);
-                        AddText(Encoding.Default.GetString(bArr, 0, n), 1);
-                    }
-                }
-                Thread.Sleep(100);
-            }
-        }
 
         private void frmChat_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -98,6 +58,8 @@ namespace myChat
         }
 
         Thread threadClientRead = null;
+        
+        //버튼을 눌러 일대일 대화창에서 관리자와 사용자를 연결함(재연결 가능)
         private void btnConnect_Click_1(object sender, EventArgs e)
         {
             try
@@ -125,6 +87,7 @@ namespace myChat
             }
         }
 
+        //관리자가 보낸 답변 내용을 읽어 사용자의 대화창에 전송함
         void ClientReadProcess()
         {
             byte[] bArr = new byte[512];
@@ -139,7 +102,7 @@ namespace myChat
             }
         }
              
-
+        //[Enter]키를 누르면 텍스트를 관리자의 대화창과 사용자의 대화창에 전송함
         private void tbClient_KeyDown(object sender, KeyEventArgs e)
         {
             
@@ -155,25 +118,7 @@ namespace myChat
             }
         }
 
-        private void sbServerStart_Click(object sender, EventArgs e)
-        {
-            if (listen != null)
-            {
-                if (MessageBox.Show("서버를 다시 시작하시겠습니까?.", "", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    listen.Stop();
-                    if (threadServer != null) threadServer.Abort();
-                    if (threadRead != null) threadRead.Abort();
-                }
-            }
-            listen = new TcpListener(9000);
-            listen.Start();
-            AddText($"서버가 [{ConnectPort}] Port에서 시작되었습니다.\r\n\r\n", 1);
-
-            threadServer = new Thread(ServerProcess);
-            threadServer.Start();
-        }
-
+        
         
     }
 }

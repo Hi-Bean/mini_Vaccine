@@ -20,6 +20,7 @@ namespace myChat
         }
 
         delegate void cbAddText(string str, int i);
+        //AddText()를 사용하여 대화창(1), 메세지 입력창(2), Statusstrip(3)에 선택하여 텍스트 추가 
         void AddText(string str, int i)
         {
             if (tbServer.InvokeRequired || tbClient.InvokeRequired ||statusStrip1.InvokeRequired)
@@ -58,6 +59,7 @@ namespace myChat
         int CurrentClientNum = 0;
         int ServerPort = 9000;
 
+        //사용자들마다 고유 번호를 부여하기 위해 string 배열 사용
         string[] sname = new string[100];
         void ServerProcess()// Connect 요구 처리 쓰레드
         {
@@ -83,8 +85,9 @@ namespace myChat
                 }
                 Thread.Sleep(100);
             }
-        }        
-
+        } 
+        
+        // 사용자 보낸 텍스트를 읽어오는 작업
         void ReadProcess()
         {
             
@@ -111,21 +114,8 @@ namespace myChat
             if (threadRead != null) threadRead.Abort();
         }
 
-        void ClientReadProcess()
-        {
-            byte[] bArr = new byte[512];
-            while (true)
-            {
-                if (sock.Available > 0)
-                {
-                    int n = sock.Receive(bArr);
-                    AddText($"{Encoding.Default.GetString(bArr, 0, n)}", 2);
-                }
-                Thread.Sleep(100);
-            }
-        }
-             
-
+        
+        //[Enter]키를 누르면 텍스트를 관리자의 대화창과 사용자의 대화창에 전송함
         private void tbClient_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -142,7 +132,7 @@ namespace myChat
                 tbClient.Text = "";
             }
         }
-
+        //메세지 입력창에서 [오른쪽 버튼] - [ServerStart] 서버를 시작하는 기능
         private void pmnuServerStart_Click(object sender, EventArgs e)
         {
             if (listen != null)
@@ -162,6 +152,7 @@ namespace myChat
             threadServer.Start();
         }
 
+        //원하는 사용자를 선택해 해당 사용자에게만 답변을 보낼 수 있음
         private void sbClientList_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             sbClientList.Text = e.ClickedItem.Text;
