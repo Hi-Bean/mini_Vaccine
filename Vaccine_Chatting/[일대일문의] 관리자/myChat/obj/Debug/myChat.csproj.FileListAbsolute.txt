@@ -1,0 +1,20 @@
+C:\Users\user\source\repos\myChat\myChat\bin\Debug\myChat.exe.config
+C:\Users\user\source\repos\myChat\myChat\bin\Debug\myChat.exe
+C:\Users\user\source\repos\myChat\myChat\bin\Debug\myChat.pdb
+C:\Users\user\source\repos\myChat\myChat\obj\Debug\myChat.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\myChat\myChat\obj\Debug\myChat.frmChat.resources
+C:\Users\user\source\repos\myChat\myChat\obj\Debug\myChat.Properties.Resources.resources
+C:\Users\user\source\repos\myChat\myChat\obj\Debug\myChat.csproj.GenerateResource.cache
+C:\Users\user\source\repos\myChat\myChat\obj\Debug\myChat.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\myChat\myChat\obj\Debug\myChat.exe
+C:\Users\user\source\repos\myChat\myChat\obj\Debug\myChat.pdb
+C:\Users\user\source\repos\myChat - 복사본\myChat\bin\Debug\myChat.exe.config
+C:\Users\user\source\repos\myChat - 복사본\myChat\bin\Debug\myChat.exe
+C:\Users\user\source\repos\myChat - 복사본\myChat\bin\Debug\myChat.pdb
+C:\Users\user\source\repos\myChat - 복사본\myChat\obj\Debug\myChat.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\myChat - 복사본\myChat\obj\Debug\myChat.frmChat.resources
+C:\Users\user\source\repos\myChat - 복사본\myChat\obj\Debug\myChat.Properties.Resources.resources
+C:\Users\user\source\repos\myChat - 복사본\myChat\obj\Debug\myChat.csproj.GenerateResource.cache
+C:\Users\user\source\repos\myChat - 복사본\myChat\obj\Debug\myChat.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\myChat - 복사본\myChat\obj\Debug\myChat.exe
+C:\Users\user\source\repos\myChat - 복사본\myChat\obj\Debug\myChat.pdb
